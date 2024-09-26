@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #52dd39;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #af2ae8;
+            border-radius: 3px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            border: none;
+            background-color: #c933d6;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+            <a href="#">Productos</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+        </div>
+    </header>
+</body>
+</html>

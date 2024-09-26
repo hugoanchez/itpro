@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d1f22c;
+}
+
+.form-container {
+    background-color: #212202; /* Color gris del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los campos */
+}
+
+label, p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

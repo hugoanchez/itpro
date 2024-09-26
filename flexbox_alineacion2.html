@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineación de Múltiples Bloques</title>
+    <style>
+        /* Estilo para el contenedor principal */
+        .container {
+            display: flex; /* Activar flexbox */
+            flex-direction: column; /* orientacion de los div, renglones, columnas, etc */
+            flex-wrap: wrap; /* Permitir que los elementos se desplieguen en varias filas  */
+            justify-content: center; /* Centrar los bloques horizontalmente */
+            align-items: center; /* Centrar los bloques verticalmente */
+            width: 100vw; /* Ancho completo de la ventana */
+            height: 100vh; /* Altura completa de la ventana */
+            background-color: lightgray;
+            border: 2px solid black;
+            gap: 10px; /* Espacio entre los bloques */
+        }
+
+        /* Estilo para los bloques */
+        .box {
+            width: 150px; /* Ancho de los bloques */
+            height: 150px; /* Altura de los bloques */
+            background-color: lightcoral; /* Color de fondo de los bloques */
+            display: flex; /* Usar flexbox dentro de cada bloque */
+            justify-content: center; /* Centrar el contenido horizontalmente */
+            align-items: center; /* Centrar el contenido verticalmente */
+            color: white; /* Color del texto */
+            font-size: 20px; /* Tamaño del texto */
+            border: 2px solid black; /* Borde de los bloques */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Bloques individuales -->
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Estilizado</title>
+    <link rel="stylesheet" href="Documentos/Curso html/CSS/estilo.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" required>
+
+            <input type="hidden" name="hiddenField" value="hiddenValue">
+
+            <label for="userType">Tipo de Usuario:</label>
+            <select id="userType" name="userType" required>
+                <option value="" disabled selected>Seleccione un tipo</option>
+                <option value="admin">Administrador</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Visor</option>
+            </select>
+
+            <!-- Radio buttons para suscripción -->
+            <p>¿Desea suscribirse?</p>
+            <div class="radio-group">
+                <input type="radio" id="subscribeYes" name="subscribe" value="yes" required>
+                <label for="subscribeYes">Sí</label>
+
+                <input type="radio" id="subscribeNo" name="subscribe" value="no" required>
+                <label for="subscribeNo">No</label>
+            </div>
+
+            <!-- Múltiples checkboxes para selección múltiple -->
+            <p>Seleccione el tipo de información que desea recibir:</p>
+            <div class="checkbox-group">
+                <input type="checkbox" id="updates" name="infoType" value="updates">
+                <label for="updates">Actualizaciones</label>
+
+                <input type="checkbox" id="news" name="infoType" value="news">
+                <label for="news">Noticias</label>
+
+                <input type="checkbox" id="offers" name="infoType" value="offers">
+                <label for="offers">Ofertas especiales</label>
+            </div>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

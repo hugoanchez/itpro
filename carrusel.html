@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-height: 600px; /* Altura máxima del carrusel */
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none; /* Ocultar imágenes por defecto */
+        }
+        .carousel img.active {
+            display: block; /* Mostrar imagen activa */
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+        </div>
+    </header>
+
+    <div class="carousel">
+        <img src="Imagenes/imagen1.jpg" alt="Imagen 1" class="active">
+        <img src="Imagenes/imagen2.jpg" alt="Imagen 2">
+        <img src="Imagenes/imagen3.jpg" alt="Imagen 3">
+        <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
+        <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function changeImage(direction) {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>

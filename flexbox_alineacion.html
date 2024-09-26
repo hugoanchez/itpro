@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineación con Flexbox</title>
+    <style>
+        /* Contenedor principal que ocupa toda la pantalla */
+        .container {
+            display: flex; /* Activar flexbox */
+            justify-content: center; /* Alinear horizontalmente al centro */
+            align-items: center; /* Alinear verticalmente al centro */
+            width: 100vw; /* Ancho completo de la ventana */
+            height: 100vh; /* Altura completa de la ventana */
+            background-color: lightgray;
+            border: 2px solid black;
+        }
+
+        /* Contenedor secundario */
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: lightcoral;
+            display: flex; /* Usar flexbox también en el contenedor secundario */
+            justify-content: center; /* Alinear contenido interno horizontalmente */
+            align-items: center; /* Alinear contenido interno verticalmente */
+            color: white;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Contenedor secundario alineado al centro -->
+        <div class="box">
+            Contenedor centrado
+        </div>
+    </div>
+</body>
+</html>

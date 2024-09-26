@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Básico de CSS Grid</title>
+    <style>
+        /* Estilo para el contenedor de la cuadrícula */
+        .grid-container {
+            display: grid; /* Activar Grid */
+            grid-template-columns: repeat(3, 3fr); /* 3 columnas de igual tamaño */
+            grid-template-rows: repeat(6, 150px); /* 2 filas de 150px de altura */
+            gap: 10px; /* Espacio entre los bloques */
+            width: 50%; /* Ancho completo del contenedor */
+            height: auto; /* Altura automática según contenido */
+            background-color: greenyellow; /* Color de fondo del contenedor */
+            padding: 30px; /* Relleno interno del contenedor */
+        }
+
+        /* Estilo para los bloques */
+        .box {
+            background-color: rgb(81, 204, 98); /* Color de fondo de los bloques */
+            display: flex; /* Usar flexbox dentro de cada bloque */
+            justify-content: center; /* Centrar el contenido horizontalmente */
+            align-items: center; /* Centrar el contenido verticalmente */
+            color: white; /* Color del texto */
+            font-size: 50px; /* Tamaño del texto */
+            border: 2px solid black; /* Borde de los bloques */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal de la cuadrícula -->
+    <div class="grid-container">
+        <!-- Bloques individuales -->
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Color en Ventanas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .ventana {
+            width: 30%;
+            height: 80%;
+            border: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            transition: background-color 0.3s;
+        }
+    </style>
+    @media only screen and (min-width: 400px) and (max-width: 800px)
+</head>
+<div>
+    
+</div>
+<body>
+
+    <div class="ventana" id="ventana1">Ventana 1</div>
+    <div class="ventana" id="ventana2">Ventana 2</div>
+    <div class="ventana" id="ventana3">Ventana 3</div>
+    <div class="ventana" id="ventana3">VEntana 4</div>
+
+    <script>
+        function cambiarColor() {
+            const ventanas = document.querySelectorAll('.ventana');
+            ventanas.forEach(ventana => {
+                const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+                ventana.style.backgroundColor = color;
+            });
+        }
+
+        window.addEventListener('resize', cambiarColor);
+        cambiarColor(); // Llamar la función al cargar la página
+    </script>
+
+</body>
+</html>

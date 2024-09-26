@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de display y posiciones</title>
+    <style>
+
+
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            border: 2px solid black;
+            background-color:lightgray;
+        }
+
+        /* Estilos comunes para los div */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid blue;
+            margin: 10px;
+        }
+
+        /* Posicionamiento específico para cada div */
+        .block {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+        }
+
+        .inline-block {
+            position: absolute;
+            top: 10px;
+            left: 150px;
+            display: inline-block;
+        }
+
+        .inline {
+            position: absolute;
+            top: 150px;
+            left: 10px;
+            display: inline;
+            width: auto; /* En display inline, el width y height no se respetan */
+            height: auto;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            width: 250px;
+            border: 1px dashed red;
+        }
+
+        .flex-box {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Display block -->
+        <div class="box block">Block</div>
+    
+        <!-- Display inline-block -->
+        <div class="box inline-block">Inline-block</div>
+        
+        <!-- Display inline -->
+        <div class="box inline">Inline</div>
+        
+        <!-- Display flex -->
+        <div class="flex-container">
+            <div class="flex-box">1</div>
+            <div class="flex-box">2</div>
+            <div class="flex-box">3</div>
+        </div>
+    </div>
+
+</body>
+</html>

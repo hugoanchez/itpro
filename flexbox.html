@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Flexbox</title>
+    <style>
+        /* Estilos comunes para los elementos */
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            display: flex; /* Esto permite alinear contenido interno usando flex */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* 1. Flexbox en fila (row) */
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            gap: 200px; /* Espaciado entre los elementos */
+        }
+
+        /* 2. Flexbox en columna (column) */
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            gap: 200px;
+        }
+
+     
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. Flexbox en fila (row) -->
+    <div class="container">
+        <h3>Flexbox en fila (row)</h3>
+        <div class="flex-row">
+            <div class="box" style="width: 100px; height: 100px;">1</div>
+            <div class="box" style="width: 100px; height: 100px;">2</div>
+            <div class="box" style="width: 100px; height: 100px;">3</div>
+        </div>
+    </div>
+
+    <!-- 2. Flexbox en columna (column) -->
+    <div class="container">
+        <h3>Flexbox en columna (column)</h3>
+        <div class="flex-column">
+            <div class="box" style="width: 100px; height: 100px;">A</div>
+            <div class="box" style="width: 100px; height: 100px;">B</div>
+            <div class="box" style="width: 100px; height: 100px;">C</div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
